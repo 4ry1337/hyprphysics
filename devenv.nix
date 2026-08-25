@@ -27,7 +27,9 @@
     cargo-watch
     cargo-cache
     cargo-audit
+    cargo-deny
     sqlx-cli
+    openssl
   ];
 
   git-hooks.hooks = {

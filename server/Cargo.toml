@@ -1,6 +1,27 @@
 [package]
 name = "server"
 version = "0.1.0"
-edition = "2024"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
 
 [dependencies]
+actix-web = "4"
+
+# DATABASE
+sqlx = { version = "0.9", features = [ "runtime-tokio", "tls-native-tls" ] }
+
+# PARSING
+serde.workspace = true
+
+# ERRORS
+thiserror.workspace = true
+anyhow = "1"
+
+# TRACING
+tracing = "0.1"
+tracing-actix-web = "0.7"
+
+# TEMPLATES
+tera = "2.2"

@@ -1,0 +1,44 @@
+policies:
+  - type: commit
+    spec:
+      header:
+        length: 89
+        imperative: true
+        case: lower
+        invalidLastCharacters: .
+      dco: true
+      gpg:
+        required: false
+        identity:
+          gitHubOrganization: some-organization
+      spellcheck:
+        locale: US
+      maximumOfOneCommit: true
+      conventional:
+        types:
+          - feat
+          - fix
+          - dx
+          - ci
+          - docs
+          - refactor
+          - perf
+          - test
+          - chore
+        scopes:
+          - server
+          - simulation
+          - content
+        descriptionLength: 72
+  - type: license
+    spec:
+      skipPaths:
+        - .git/
+        - .build*/
+      includeSuffixes:
+        - .ext
+      excludeSuffixes:
+        - .exclude-ext-prefix.ext
+      allowPrecedingComments: false
+      header: |
+        This is the contents of a license header.

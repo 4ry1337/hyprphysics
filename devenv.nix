@@ -11,17 +11,30 @@
     enable = true;
     channel = "stable";
     toolchain.rustfmt = inputs.fenix.packages.${pkgs.system}.latest.rustfmt;
+    mold.enable = true;
+    components = [
+      "rustc"
+      "cargo"
+      "clippy"
+      "rustfmt"
+      "rust-analyzer"
+      "llvm-tools-preview"
+    ];
   };
 
-  packages = [
-    pkgs.cargo-cache
+  packages = with pkgs; [
+    cargo-llvm-cov
+    cargo-watch
+    cargo-cache
+    cargo-audit
+    sqlx-cli
   ];
 
   git-hooks.hooks = {
-    shellcheck.enable = true;
+    typos.enable = true;
+    conform.enable = true;
+    actionlint.enable = true;
     clippy.enable = true;
-    clippy.packageOverrides.cargo = pkgs.cargo;
-    clippy.packageOverrides.clippy = pkgs.clippy;
     clippy.settings.allFeatures = true;
   };
 

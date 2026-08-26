@@ -1,14 +1,24 @@
 name: Rust
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths-ignore:
       - '**.md'
+      - '.*'
+      - 'AUTHORS'
+      - 'LICENSE'
+      - 'typos.toml'
+      - 'devenv.*'
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - main
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - '.*'
+      - 'AUTHORS'
+      - 'LICENSE'
+      - 'typos.toml'
+      - 'devenv.*'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

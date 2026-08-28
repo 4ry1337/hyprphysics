@@ -3,13 +3,20 @@ name = "hyper"
 version = "0.1.0"
 edition = "2024"
 license = "AGPL-3.0-or-later" 
-author = ["Rakhat Yskak <yskak.rakhat@gmail.com>"]
+authors = ["Rakhat Yskak <yskak.rakhat@gmail.com>"]
 
 [dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 actix-web = "4"
 
+# TEMPLATES
+tera = "2.3"
+
 # DATABASE
-sqlx = { version = "0.9" }
+sqlx = { version = "0.9", features = [ "runtime-tokio", "tls-native-tls" ] }
+
+# TIME
+jiff = { version = "0.2", features = ["serde"] }
 
 # ERROR
 thiserror = "2"
@@ -17,6 +24,10 @@ anyhow = "1"
 
 # PARSING
 serde = "1"
+
+# TRACING
+tracing = "0.1"
+tracing-actix-web = "0.7"
 
 # DOCS
 utoipa = "5.5"

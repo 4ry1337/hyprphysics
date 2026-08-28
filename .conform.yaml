@@ -25,7 +25,5 @@ policies:
           - test
           - chore
         scopes:
-          - server
-          - simulation
-          - content
+          - api
         descriptionLength: 72

@@ -1,6 +1,6 @@
-# HyprPhysics
+# Hyper
 
-An open-source web application for learning physics.
+An open-source web application for learning.
 
 The project started from my own notes and experience preparing for the Unified National Testing (UNT) in Kazakhstan (similar to SAT Subject Test in Physics, which was discontinued in 2021, with some overlap with AP Physics). The project is not tied to any particular exam, however.
 
@@ -9,9 +9,9 @@ The initial curriculum is roughly comparable in scope to high-school physics cou
 ## Features
 
 * Learning roadmaps organized by topic and difficulty
-* Physics notes and explanations
-* Interactive 2D simulations
-* Physics problems and exercises
+<!-- * Physics notes and explanations -->
+<!-- * Interactive 2D simulations -->
+<!-- * Physics problems and exercises -->
 * Anki-style flashcards and spaced repetition
 * Progress tracking
 * Study streaks
@@ -19,11 +19,11 @@ The initial curriculum is roughly comparable in scope to high-school physics cou
 
 The roadmap is inspired by resources such as [NeetCode](https://neetcode.io/): topics are organized in a sensible learning order, with progress tracked as you work through them.
 
-## Simulations
-
-Interactive simulations are written in Rust using [Bevy](https://bevyengine.org/) and compiled to WebAssembly.
-
-Simulations are intended to accompany the material rather than replace it. A lesson about projectile motion, for example, can include a simulation where velocity, angle, gravity, and other parameters can be changed while observing the result.
+<!-- ## Simulations -->
+<!---->
+<!-- Interactive simulations are written in Rust using [Bevy](https://bevyengine.org/) and compiled to WebAssembly. -->
+<!---->
+<!-- Simulations are intended to accompany the material rather than replace it. A lesson about projectile motion, for example, can include a simulation where velocity, angle, gravity, and other parameters can be changed while observing the result. -->
 
 ## Technology
 
@@ -31,8 +31,8 @@ Simulations are intended to accompany the material rather than replace it. A les
 * Actix Web
 * Server-side rendered HTML
 * Templates
-* Bevy
-* WebAssembly
+<!-- * Bevy -->
+<!-- * WebAssembly -->
 * SQLite / PostgreSQL
 * JavaScript only where necessary
 

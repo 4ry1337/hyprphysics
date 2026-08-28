@@ -17,6 +17,7 @@ reparametrized = "reparametrized"
 mis = "mis"                             # mis - multiple importance sampling
 caf = "caf"                             # CAF - Core Audio Format
 consts = "consts"
+Neet = "Neet"
 
 # Match a Whole Word - Case Sensitive
 [default.extend-identifiers]

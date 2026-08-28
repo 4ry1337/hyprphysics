@@ -1,12 +1,43 @@
-[workspace]
-resolver = "3"
-members = ["server", "simulator"]
-
-[workspace.package]
+[package]
+name = "hyper"
+version = "0.1.0"
 edition = "2024"
-authors = ["Rakhat Yskak <yskak.rakhat@gmail.com>"]
-license = "AGPL-3.0-or-later"
+license = "AGPL-3.0-or-later" 
+author = ["Rakhat Yskak <yskak.rakhat@gmail.com>"]
 
-[workspace.dependencies]
-serde = "1"
+[dependencies]
+actix-web = "4"
+
+# DATABASE
+sqlx = { version = "0.9" }
+
+# ERROR
 thiserror = "2"
+anyhow = "1"
+
+# PARSING
+serde = "1"
+
+# DOCS
+utoipa = "5.5"
+
+[dev-dependencies]
+criterion = "0.8"
+
+[lints.clippy]
+pedantic = { level = "deny", priority = -1 }   # UM, ACTUALLY
+nursery = { level = "deny", priority = -1 }    # BETA LINTS
+# DENY PANICS
+unwrap_used = "deny"
+expect_used = "deny"
+indexing_slicing = "deny"
+arithmetic_side_effects = "deny"
+unreachable = "deny"
+unimplemented = "deny"
+unchecked_time_subtraction = "deny"
+todo = "deny"
+string_slice = "deny"
+panic_in_result_fn = "deny"
+panic = "deny"
+exit = "deny"
+as_conversions = "deny"
